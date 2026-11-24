@@ -45,7 +45,11 @@ def mostrar_tabla(sucesion):
 
 print("¡Bienvenido a la graficadora de patrones!")
 
-cantidad = int(input("¿Cuántos términos tendrá cada sucesión? "))
+cantidad = int(input("Cantidad de términos (1-100): "))
+
+if cantidad < 1 or cantidad > 100:
+    print("Error: la cantidad debe estar entre 1 y 100.")
+    exit()
 
 if cantidad <= 0:
     print("La cantidad de términos debe ser mayor que cero.")
